@@ -1,4 +1,7 @@
 @import "./colors.scss";
 
-@import "../components/metronome-style.scss";
-@import "../components/input-range/input-range-style.scss";
+@import "../components/metronome/metronome-style.scss";
+@import "../components/input-range-scss/input-range-style.scss";
+@import "../components/metronome/slider.scss";
+@import "../components/metronome/headline-section.scss";
+@import "../components/metronome/info-section.scss";
