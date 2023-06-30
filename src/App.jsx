@@ -1,33 +1,43 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { swichTheme, switchIcons, METRONOME_TEXT } from './components/core-functions/environment';
 import Core from './components/metronome/Core';
+import useLocalStorage from 'use-local-storage';
+import Info from './components/info-section/Info';
+import Footer from './components/footer-section/Footer';
 
 const App = () => {
+
+  const [checked, setChecked] = useState(false);  
+  const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light');
+
+  useEffect(() => { setTheme('light') }, [setTheme]);
+
   return (
-    <div>
+    <div data-theme={theme}>
       <section className='headline'>
         <div className="headline-container">
-          <div className='headline-text'>Metronome</div>
+          <div className="headline-flex">
+            <div className='headline-text'>{METRONOME_TEXT.title}</div>
+            <div className='modes-flex'>
+              <div className='label-check'>
+                <label className="switch">
+                  <input type="checkbox" onChange={e => { swichTheme(theme, setTheme, setChecked, e); }} checked={checked} />
+                  <span className="slider round"></span>
+                </label>
+                <div className='label-text'>{switchIcons(checked)}</div>
+              </div>
+            </div>
+          </div>
         </div>
-        </section>      
+      </section>
       <section className='metronome-section'>
         <Core />
       </section>
       <section className='info'>
-        <div className='info-container'>
-          <h2 className="main-title">How to use the Metronome?</h2>
-          <div className="text-block" id='info'>
-            <ol>
-              <li>
-                <h3>Set the tempo</h3>
-                <p>Move the slide or click the plus or minus buttons to set the tempo of the metronome.</p>
-              </li>
-              <li>
-                <h3>Press the Start button</h3>
-                <p>Press the Start button and the metronome will start. To stop the metronome use the red stop button.</p>
-              </li>
-            </ol>
-          </div>
-        </div>
+        <Info />
+      </section>
+      <section className='footer'>
+        <Footer />
       </section>
     </div>
   )

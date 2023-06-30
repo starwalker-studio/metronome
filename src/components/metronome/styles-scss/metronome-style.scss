@@ -1,60 +1,55 @@
+.metronome-section {
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+    background-color: var(--background-site);
+}
+
 .core-container {
     width: 100%;
-    max-width: 1013px;
     margin: auto;
-}
 
-.modes-flex {
-    margin-top: 1rem;
-    justify-content: flex-end;
-    align-items: center;
-    align-content: center;
-    display: flex;
-    flex-wrap: wrap;
-}
+    @media (min-width: 1024px) {
+        max-width: 1013px;
 
-.label {
-    &-check {
-        color: #474b5c;
-        display: table-cell;
-        vertical-align: top;
-    }
-
-    &-text {
-        margin-left: 1rem;
-        font-size: 16px;
-        line-height: 22px;
     }
 }
 
 .metronome {
     &-box {
-        margin-top: 14px;
-        padding: 18px 35px 26px;
-        border-radius: 15px;
-        background-color: #fff;
+        padding: 28px 16px 26px;
+        background-color: var(--background-box);
         box-shadow: 0 0 25px rgba(0, 0, 0, .1);
+
+        @media (min-width: 1024px) {
+            padding: 28px 48px 26px;
+            border-radius: 15px;
+        }
     }
 
     &-metric {
         margin-top: 14px;
-        color: #60687c;
+        color: var(--metronome-color-metric);
         font-size: 17px;
         text-align: center;
     }
 
     &-val {
-        color: #21232f;
-        font-size: 130px;
+        color: var(--metronome-color-value-bpm);
+        font-size: 100px;
         font-weight: 700;
         line-height: 1;
         text-align: center;
         margin-top: 1rem;
         margin-bottom: 1rem;
+
+        @media (min-width: 1024px) {
+            font-size: 130px;
+
+        }
     }
 
     &-bpm {
-        color: #898da8;
+        color: var(--metronome-color-bpm);
         font-size: 16px;
         text-align: center;
     }
@@ -80,18 +75,26 @@
     }
 
     &-button {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 800;
         color: #fff;
-        width: 48px;
-        height: 45px;
+        width: 40px;
+        height: 35px;
         cursor: pointer;
         border: none;
         transition: .2s linear;
-        // border-color: #315e83;
-        background: #d1d2d3;
+        background: #a8a8a8;
         border-radius: 50%;
-        // background: 0 0;
+        box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.11);
+        -webkit-box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.11);
+        -moz-box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.11);
+        
+        @media (min-width: 1024px) {
+            font-size: 1.2rem;
+            width: 48px;
+            height: 45px;
+
+        }
     }
 
 }
@@ -131,7 +134,7 @@
         min-width: 156px;
         border: none;
         border-radius: 7px;
-        background: #f5803d;
+        background: #eca74d;
     }
 
     &-stop {
@@ -157,7 +160,7 @@
     min-height: 35px;
     padding: 0 10px;
     border-radius: 4px;
-    background: #f7ece8;
+    background: var(--metronome-metric-span);
     justify-content: center;
     align-items: center;
     align-content: center;

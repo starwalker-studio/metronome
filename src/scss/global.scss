@@ -1,15 +1,41 @@
 @import "./index.scss";
 
+:root {
+    --background-site: #{$background-color-site};
+    --background-box: #{$background-color-box};
+    --metronome-color-metric: #{$color-metric};
+    --metronome-color-value-bpm: #{$color-value-bpm};
+    --metronome-color-bpm: #{$color-bpm};
+    --metronome-metric-span: #{$metric-span};
+    --info-main-title: #{$main-title};
+    --info-text-block: #{$text-block};
+    --input-range-track-color: #{$range-track-color};
+    --input-slider-color: #{$slider-color};
+}
+
+[data-theme='dark'] {
+    --background-site: #{$background-color-site-dark};
+    --background-box: #{$background-color-box-dark};
+    --metronome-color-metric: #{$color-metric-dark};
+    --metronome-color-value-bpm: #{$color-value-bpm-dark};
+    --metronome-color-bpm: #{$color-bpm-dark};
+    --metronome-metric-span: #{$metric-span-dark};
+    --info-main-title: #{$main-title-dark};
+    --info-text-block: #{$text-block-dark};
+    --input-range-track-color: #{$range-track-color-dark};
+    --input-slider-color: #{$slider-color-dark};
+}
+
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    font-family: 'Montserrat','Open Sans',sans-serif;
+    font-family: Verdana, sans-serif;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;   
-    background-color: #f5f7fb;
+    -moz-osx-font-smoothing: grayscale;       
 }
 
 code {

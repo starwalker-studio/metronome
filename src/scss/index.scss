@@ -1,7 +1,8 @@
 @import "./colors.scss";
 
-@import "../components/metronome/metronome-style.scss";
-@import "../components/input-range-scss/input-range-style.scss";
-@import "../components/metronome/slider.scss";
-@import "../components/metronome/headline-section.scss";
-@import "../components/metronome/info-section.scss";
+@import "../components/metronome/styles-scss/metronome-style.scss";
+@import "../components/metronome/styles-scss/input-range-style.scss";
+@import "../components/metronome/styles-scss/slider.scss";
+@import "../components/metronome/styles-scss/headline-section.scss";
+@import "../components/metronome/styles-scss/info-section.scss";
+@import "../components/metronome/styles-scss/footer.scss";

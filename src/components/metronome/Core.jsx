@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faStop } from '@fortawesome/free-solid-svg-icons';
-import { stopMetro, action, reset, plusSlider, lessSlider } from '../core-functions/environment';
+import { stopMetro, action, reset, plusSlider, lessSlider, METRONOME_TEXT } from '../core-functions/environment';
 import korg from '../../sound/metronome-click.mp3';
 import Beat from '../metronome-beat/Beat';
 
@@ -27,23 +27,14 @@ const Core = () => {
 
     return (
         <div>
-            <div className='core-container'>            
-            <div className='modes-flex'>
-                <div className='label-check'>
-                    <label className="switch">
-                        <input type="checkbox" />
-                        <span className="slider round"></span>
-                    </label>
-                </div>
-                <div className='label-text'>Light / Dark mode</div>
-            </div>
+            <div className='core-container'>
                 <div className='metronome-box'>
                     <div className='metronome-bpm'>
                         <div className="metronome-metric" id='metric'>
-                            <span>4/4</span>
+                            <span>{METRONOME_TEXT.metric}</span>
                         </div>
                         <div className="metronome-val">{sliderValue}</div>
-                        <div className="metronome-bpm">BPM</div>
+                        <div className="metronome-bpm">{METRONOME_TEXT.bpm}</div>
                     </div>
                     <div className="metronome-bar-flex">
                         <button className='metronome-button' onClick={() => lessSlider(sliderValue, setSliderValue)}>-</button>
@@ -56,8 +47,8 @@ const Core = () => {
                     <div className="buttons-flex">
                         {
                             !play ?
-                                (<button className='button-start' type='button' onClick={() => setPlay(true)}><span>{playIcon}</span> Start</button>) :
-                                (<button className='button-stop' type='button' onClick={() => stopMetro(setPlay, setSeconds)}><span>{stopIcon}</span> Stop</button>)
+                                (<button className='button-start' type='button' onClick={() => setPlay(true)}><span>{playIcon}</span>{METRONOME_TEXT.play_button}</button>) :
+                                (<button className='button-stop' type='button' onClick={() => stopMetro(setPlay, setSeconds)}><span>{stopIcon}</span>{METRONOME_TEXT.stop_button}</button>)
                         }
 
                     </div>
