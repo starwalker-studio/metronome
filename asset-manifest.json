@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3757df1c.css",
+    "main.js": "/static/js/main.e83b0337.js",
+    "static/media/metronome-click.mp3": "/static/media/metronome-click.473edc099c92a3e9a180.mp3",
+    "index.html": "/index.html",
+    "main.3757df1c.css.map": "/static/css/main.3757df1c.css.map",
+    "main.e83b0337.js.map": "/static/js/main.e83b0337.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3757df1c.css",
+    "static/js/main.e83b0337.js"
+  ]
+}
