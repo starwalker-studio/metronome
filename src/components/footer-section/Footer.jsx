@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className='footer-container'>
             <div className="footer-flex">
-                <img className='logo-img' src="metronome/img/logoWord.png" alt="logo" />
+                <img className='logo-img' src="img/logoWord.png" alt="logo" />
             </div>
         </div>
     )
